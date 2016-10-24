@@ -94,3 +94,40 @@ py_binary(
         "//im2txt/inference_utils:vocabulary",
     ],
 )
+
+
+py_binary(
+    name = "capture",
+    srcs = ["capture.py"],
+    srcs_version = "PY2AND3",
+    deps = [
+        ":configuration",
+        ":inference_wrapper",
+        "//im2txt/inference_utils:caption_generator",
+        "//im2txt/inference_utils:vocabulary",
+    ],
+)
+
+py_binary(
+    name = "dump",
+    srcs = ["dump.py"],
+    srcs_version = "PY2AND3",
+    deps = [
+        ":configuration",
+        ":inference_wrapper",
+        "//im2txt/inference_utils:caption_generator",
+        "//im2txt/inference_utils:vocabulary",
+    ],
+)
+
+py_binary(
+    name = "server",
+    srcs = ["server.py"],
+    srcs_version = "PY2AND3",
+    deps = [
+        ":configuration",
+        ":inference_wrapper",
+        "//im2txt/inference_utils:caption_generator",
+        "//im2txt/inference_utils:vocabulary",
+    ],
+)

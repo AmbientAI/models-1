@@ -19,6 +19,8 @@ PORT = 9003
 
 
 class Im2TxtStubModel(TFModel):
+    __model__ = "imt2xt"
+
     '''Create a stub TFModel to allow orchestrator to work
     '''
     # HIJACK init to not call at()

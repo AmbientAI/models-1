@@ -28,6 +28,8 @@ class Im2TxtStubModel(TFModel):
         self.frame_num = 0
 
     def at(self, host, port):
+        # Call the base class to set member variables
+        super(Im2TxtStubModel, self).at(host, port)
         self.client = CVClient(host, port)
         return self
 
